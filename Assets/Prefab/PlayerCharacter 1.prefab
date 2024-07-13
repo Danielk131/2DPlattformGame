@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1894073967540494914}
   m_Layer: 0
   m_Name: PlayerCharacter 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   boxCollider2D: {fileID: 3696981093042981135}
+  animator: {fileID: 0}
 --- !u!61 &3696981093042981135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -234,7 +235,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73, y: 0.75178385}
+  m_Size: {x: 0.71, y: 0.75178385}
   m_EdgeRadius: 0
 --- !u!50 &1894073967540494914
 Rigidbody2D:
