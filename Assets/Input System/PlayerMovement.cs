@@ -59,11 +59,11 @@ public class TestingInputSystem : MonoBehaviour
         else
         {
             rayColor = Color.red;
-            Debug.Log("Er på bakken!");
+           // Debug.Log("Er på bakken!");
 
         }
         Debug.DrawRay(capsuleCollider2D.bounds.center, Vector2.down * (capsuleCollider2D.bounds.extents.y + extraHeightText), rayColor);
-        Debug.Log(raycastHit2D.collider);
+       // Debug.Log(raycastHit2D.collider);
         return raycastHit2D.collider != null;
     }
 
@@ -78,7 +78,7 @@ public class TestingInputSystem : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
-        Debug.Log(horizontal);
+        //Debug.Log(horizontal);
 
 
     }
@@ -108,7 +108,7 @@ public class TestingInputSystem : MonoBehaviour
         {
             animator.SetBool("Jump", false);
         }
-        Debug.Log(animator.GetBool("Jump"));
+       // Debug.Log(animator.GetBool("Jump"));
 
 
     }
@@ -129,13 +129,13 @@ public class TestingInputSystem : MonoBehaviour
         {
             Flip();
             animator.SetFloat("MoveDirection", 1);
-            Debug.Log("Høyre!");
+            //Debug.Log("Høyre!");
         }
         else if (isFacingRight && horizontal < 0f)
         {
             Flip();
             animator.SetFloat("MoveDirection", 1);
-            Debug.Log("Venstre");
+           // Debug.Log("Venstre");
         }
         else if (horizontal == 0)
         {

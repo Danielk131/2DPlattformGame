@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tilemap
   - Coin
+  - Fallboundry
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
