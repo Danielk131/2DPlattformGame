@@ -24,26 +24,9 @@ public class TestingInputSystem : MonoBehaviour
 
     private void Update()
     {
-        rigidbody2D.velocity = new Vector2(horizontal * speed, rigidbody2D.velocity.y);
         animator = GetComponent<Animator>();
 
-        if (!isFacingRight && horizontal > 0f)
-        {
-            flip();
-            animator.SetFloat("MoveDirection", 1);
-            Debug.Log("Høyre!");
-        }
-        else if (isFacingRight && horizontal < 0f)
-        {
-            flip();
-            animator.SetFloat("MoveDirection", 1);
-            Debug.Log("Venstre");
-        }
-        else if (horizontal == 0)
-        {
-            animator.SetFloat("MoveDirection", 0);
-
-        }
+        setAnimation();
         if(rigidbody2D.velocity.y < 0)
         {
             rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -52,6 +35,13 @@ public class TestingInputSystem : MonoBehaviour
         {
             rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+
+    }
+
+    private void FixedUpdate()
+    {
+        rigidbody2D.velocity = new Vector2(horizontal * speed, rigidbody2D.velocity.y);
+
 
     }
     private bool IsGrounded()
@@ -130,6 +120,35 @@ public class TestingInputSystem : MonoBehaviour
             Gizmos.color = Color.red;
             // Draw a box around the character's collider
             Gizmos.DrawWireCube(capsuleCollider2D.bounds.center, capsuleCollider2D.bounds.size);
+        }
+    }
+
+    private IEnumerator Wait(float durationInSeconds)
+    {
+        yield return new WaitForSeconds(durationInSeconds);
+    }
+
+    private void setAnimation()
+    {
+        if (!isFacingRight && horizontal > 0f)
+        {
+            flip();
+            animator.SetFloat("MoveDirection", 1);
+            Debug.Log("Høyre!");
+        }
+        else if (isFacingRight && horizontal < 0f)
+        {
+            flip();
+            animator.SetFloat("MoveDirection", 1);
+            Debug.Log("Venstre");
+        }
+        else if (horizontal == 0)
+        {
+            animator.SetFloat("MoveDirection", horizontal);
+
+        }
+        else {
+            animator.SetFloat("MoveDirection", 1);
         }
     }
 }
