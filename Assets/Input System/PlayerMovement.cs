@@ -26,7 +26,7 @@ public class TestingInputSystem : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        setAnimation();
+        SetAnimation();
         if(rigidbody2D.velocity.y < 0)
         {
             rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -67,7 +67,7 @@ public class TestingInputSystem : MonoBehaviour
         return raycastHit2D.collider != null;
     }
 
-    private void flip()
+    private void Flip()
     {
         isFacingRight = !isFacingRight;
         Vector3 localScale = transform.localScale;
@@ -96,7 +96,7 @@ public class TestingInputSystem : MonoBehaviour
         }
     }
 
-    public void onLanding()
+    public void OnLanding()
     {
         animator.SetBool("Jump", false);
     }
@@ -123,22 +123,17 @@ public class TestingInputSystem : MonoBehaviour
         }
     }
 
-    private IEnumerator Wait(float durationInSeconds)
-    {
-        yield return new WaitForSeconds(durationInSeconds);
-    }
-
-    private void setAnimation()
+    private void SetAnimation()
     {
         if (!isFacingRight && horizontal > 0f)
         {
-            flip();
+            Flip();
             animator.SetFloat("MoveDirection", 1);
             Debug.Log("Høyre!");
         }
         else if (isFacingRight && horizontal < 0f)
         {
-            flip();
+            Flip();
             animator.SetFloat("MoveDirection", 1);
             Debug.Log("Venstre");
         }
