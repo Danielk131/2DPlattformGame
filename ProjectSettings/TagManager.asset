@@ -8,6 +8,8 @@ TagManager:
   - Coin
   - Fallboundry
   - Checkpoint
+  - Enemy
+  - Chest
   layers:
   - Default
   - TransparentFX

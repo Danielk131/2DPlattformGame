@@ -27,17 +27,27 @@ public class PlayerCharacter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Fallboundry")
+        Debug.Log("Kollisjon med: " + collision.gameObject.tag);
+        if (collision.gameObject.tag == "Fallboundry")
         {
             virtualCamera.Follow = null;
             StartCoroutine(Wait(1f));
             Debug.Log("Falt igjennom fallboundry");
         }
 
-        if(collision.gameObject.tag.Equals("Checkpoint"))
+        if (collision.gameObject.tag.Equals("Checkpoint"))
         {
             checkPoint = collision.gameObject.transform;
             Debug.Log("Checkpoint!");
+        }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            StartCoroutine(Wait(0.1f));
         }
     }
 
