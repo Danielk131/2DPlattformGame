@@ -10,6 +10,7 @@ TagManager:
   - Checkpoint
   - Enemy
   - Chest
+  - InvisibleWall
   layers:
   - Default
   - TransparentFX
