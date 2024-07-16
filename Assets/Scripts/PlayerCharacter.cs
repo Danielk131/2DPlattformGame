@@ -53,8 +53,9 @@ public class PlayerCharacter : MonoBehaviour
     private IEnumerator Wait(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        playerCharacter.transform.position = checkPoint.position;
-        virtualCamera.Follow = playerCharacter.transform;
+        playerCharacter.transform.position = new Vector3(checkPoint.position.x, checkPoint.position.y, 0);
+        virtualCamera.transform.position = new Vector3(playerCharacter.transform.position.x, 
+            playerCharacter.transform.position.y, playerCharacter.transform.position.z);
 
     }
 }

@@ -11,6 +11,9 @@ TagManager:
   - Enemy
   - Chest
   - InvisibleWall
+  - GameArea
+  - CinemaMachineCamera
+  - InvisibleWallEnd
   layers:
   - Default
   - TransparentFX
