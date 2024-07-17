@@ -7,13 +7,17 @@ public class Chest : MonoBehaviour
 {
     private Animator animator;
     private int totalNumberCoins;
+    private int currentScene;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         totalNumberCoins = GameObject.FindObjectsOfType(typeof(Coins)).Length;
-        Debug.Log(totalNumberCoins);
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Current scene number : " + currentScene);
+        //Debug.Log(totalNumberCoins);
     }
+    //If all coins are collected it will open the chest
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -28,10 +32,12 @@ public class Chest : MonoBehaviour
         }
     }
 
+    //After waiting for x seconds it will load the next scene
     private IEnumerator Wait(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene(1);
+        currentScene++;
+        SceneManager.LoadScene(currentScene);
 
     }
 }

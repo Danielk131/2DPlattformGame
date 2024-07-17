@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class CameraExeptions : MonoBehaviour
 {
-
+    //Alternative movement, without cinemamachine!
+    /*
     private Transform player;
     public CinemachineVirtualCamera virtualCamera;
     private Camera camera;
@@ -24,10 +25,11 @@ public class CameraExeptions : MonoBehaviour
 
     private bool followPlayer = true;
 
-    //public CinemachineTransposer transposer;
+    public CinemachineTransposer transposer;
 
     void Start()
     {
+       
         player = GameObject.FindWithTag("Player").transform;
         //virtualCamera = GetComponent<CinemachineVirtualCamera>();
         mapBounds = GameObject.FindWithTag("InvisibleWall").GetComponent<EdgeCollider2D>();
@@ -114,6 +116,7 @@ public class CameraExeptions : MonoBehaviour
     {
         camPos.y = player.transform.position.y;
     }
+    */
 }
 
 

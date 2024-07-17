@@ -6,6 +6,8 @@ public class SawEnemy : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
     private float startposition;
+    //How far will the saw move
+    [SerializeField] private float moveDistance = 3;
     private float endposition;
     private float velocity=15f;
     private bool moveRight = true;
@@ -15,13 +17,15 @@ public class SawEnemy : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         startposition = rigidbody2d.transform.position.x;
-        endposition = startposition + 3;
+        endposition = startposition + moveDistance;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Checks where the enemy will move. 
+        //Will move right if it on the way right and not at the endposition
         if (moveRight) {
             if (rigidbody2d.transform.position.x < endposition)
             {
@@ -35,6 +39,7 @@ public class SawEnemy : MonoBehaviour
 
             }
         }
+        //Will moveleft if at the endposition, and moving left and not yet at the startposition
         else
         {
             if (rigidbody2d.transform.position.x > startposition)

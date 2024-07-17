@@ -7,20 +7,26 @@ using UnityEngine.Rendering;
 
 public class TestingInputSystem : MonoBehaviour
 {
-    public Rigidbody2D rigidbody2D;
-    public Transform groundCheck;
-    public LayerMask groundLayer;
-    public CapsuleCollider2D capsuleCollider2D;
+    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private CapsuleCollider2D capsuleCollider2D;
 
     private float horizontal;
-    private float speed = 4f;
-    private float jumpingPower = 8f;
+    [SerializeField] private float speed = 4f;
+    [SerializeField] private float jumpingPower = 8f;
     private bool isFacingRight = true;
 
-    public float fallMultiplier=2.5f;
-    public float lowJumpMultiplier=2.5f;
+    [SerializeField] public float fallMultiplier=2.5f;
+    [SerializeField] public float lowJumpMultiplier=2.5f;
 
-    public Animator animator;
+    [SerializeField] private Animator animator;
+
+    private void Start()
+    {
+        rigidbody2D = GetComponent<Rigidbody2D>();
+        capsuleCollider2D = GetComponent<CapsuleCollider2D>();
+    }
 
     private void Update()
     {
