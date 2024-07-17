@@ -22,11 +22,7 @@ public class TestingInputSystem : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
-    private void Start()
-    {
-        rigidbody2D = GetComponent<Rigidbody2D>();
-        capsuleCollider2D = GetComponent<CapsuleCollider2D>();
-    }
+    
 
     private void Update()
     {

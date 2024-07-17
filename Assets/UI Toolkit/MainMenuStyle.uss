@@ -1,0 +1,30 @@
+.header {
+    font-size: 50px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    margin-top: 50px;
+}
+
+.button {
+    align-self: center;
+    width: 280px;
+    height: 90px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    font-size: 20px;
+    background-image: url("project://database/Assets/BayatGames/Free%20Platform%20Game%20Assets/GUI%20(%20Update%201.7%20)/png/Empty512x512.png?fileID=-1632452535&guid=5ef3ca7e743290d448e5e48c3d4ebc9c&type=3#Empty512x512_2");
+    background-color: rgba(127, 127, 127, 0);
+    -unity-font-style: bold;
+    transition-duration: 0.35s;
+    scale: 1.1 1.1;
+    border-left-color: rgba(196, 196, 196, 0);
+    border-right-color: rgba(196, 196, 196, 0);
+    border-top-color: rgba(196, 196, 196, 0);
+    border-bottom-color: rgba(196, 196, 196, 0);
+}
+
+.button:hover {
+    scale: 1.5 1.5;
+}

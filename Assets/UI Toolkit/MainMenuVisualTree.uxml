@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=5ed5468f06a7fee4da169fafad6eba77&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/BayatGames/Free%20Platform%20Game%20Assets/Backgrounds/Background/png/1920x1080/Background/Background.png?fileID=21300000&amp;guid=a52c61e4d863eb24eb1a6cec742bd3ff&amp;type=3#Background&quot;);">
+        <ui:Label tabindex="-1" text="Main Menu&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Header" class="header" />
+        <ui:Button text="Start game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StartGameButton" class="button" style="background-color: rgba(0, 0, 0, 0); border-left-color: rgba(162, 162, 162, 0); border-right-color: rgba(162, 162, 162, 0); border-top-color: rgba(162, 162, 162, 0); border-bottom-color: rgba(162, 162, 162, 0);" />
+        <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsButton" class="button" style="background-image: url(&quot;project://database/Assets/BayatGames/Free%20Platform%20Game%20Assets/GUI%20(%20Update%201.7%20)/png/Empty512x512.png?fileID=-1632452535&amp;guid=5ef3ca7e743290d448e5e48c3d4ebc9c&amp;type=3#Empty512x512_2&quot;);" />
+        <ui:Button text="Quit game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" class="button" />
+    </ui:VisualElement>
+</ui:UXML>
