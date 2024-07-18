@@ -18,6 +18,10 @@ public class MainMenuEvents : MonoBehaviour
         _document = GetComponent<UIDocument>();
         _button = _document.rootVisualElement.Q("StartGameButton") as Button;
         _button.RegisterCallback<ClickEvent>(OnPlayGameClick);
+        _button = _document.rootVisualElement.Q("SettingsButton") as Button;
+        _button.RegisterCallback<ClickEvent>(OnSettingsClick);
+
+
         _menuButtons = _document.rootVisualElement.Query<Button>().ToList();
 
         for(int i = 0; i < _menuButtons.Count; i++)
@@ -25,6 +29,11 @@ public class MainMenuEvents : MonoBehaviour
             _menuButtons[i].RegisterCallback<ClickEvent>(OnAllButtonsCLick);
             Debug.Log("Registrerer lyd");
         }
+    }
+
+    private void OnSettingsClick(ClickEvent evt)
+    {
+        SceneManager.LoadScene(1);
     }
 
     private void OnAllButtonsCLick(ClickEvent evt)
@@ -36,7 +45,7 @@ public class MainMenuEvents : MonoBehaviour
     private void OnPlayGameClick(ClickEvent evt)
     {
         Debug.Log("Clicked event");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     private void OnDisable()
     {

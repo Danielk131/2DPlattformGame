@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/SettingsStyle.uss?fileID=7433441132597879392&amp;guid=53cd36961e9e5b84c800170cc56707f9&amp;type=3#SettingsStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/BayatGames/Free%20Platform%20Game%20Assets/Backgrounds/New%20Background%20(%20Update%201.7%20)/png/1920x1080/Background/NewBackground1920x1080.png?fileID=21300000&amp;guid=bdfa926720788184eb23c0a9a71ec9ac&amp;type=3#NewBackground1920x1080&quot;);">
+        <ui:Slider label="Music" high-value="100" show-input-field="false" inverted="false" direction="Horizontal" name="MusicSlider" class="slider" style="width: 500px; height: 50px; align-items: center; align-self: center;" />
+        <ui:Slider label="Audio " high-value="100" class="slider" />
+        <ui:Button text="Exit to &#10;main menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Exit" class="button" />
+    </ui:VisualElement>
+</ui:UXML>
