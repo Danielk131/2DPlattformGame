@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour
 {
     public static ScoreScript instance;
-    public Text scoreText;
+    [SerializeField] private Text scoreText;
 
     int coins = 0;
 
@@ -13,6 +13,7 @@ public class ScoreScript : MonoBehaviour
     {
         scoreText.text = coins.ToString();
         instance = this;
+        Debug.Log("Instans");
     }
     public void AddCoinPoint()
     {

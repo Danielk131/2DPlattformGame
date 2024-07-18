@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements;
 
 public class TestingInputSystem : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class TestingInputSystem : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    [SerializeField] private UIDocument _document;
     
 
     private void Update()
@@ -148,5 +151,16 @@ public class TestingInputSystem : MonoBehaviour
             animator.SetFloat("MoveDirection", 1);
         }
     }
-}
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        Debug.Log("Trykket på esc!");
+       if (context.performed)
+        {
+            _document.enabled = true;
+       }
+       
+
+        }
+    }
+
 

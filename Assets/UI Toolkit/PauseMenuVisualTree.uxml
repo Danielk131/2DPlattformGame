@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/PauseMenyStyle.uss?fileID=7433441132597879392&amp;guid=f4dfd35cc01177043bf3d4004a86d8b7&amp;type=3#PauseMenyStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; visibility: visible; display: flex; opacity: 1; background-color: rgba(10, 10, 10, 0.75);">
+        <ui:Button text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PauseContinueButton" class="button" />
+        <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PauseSettingsButton" enable-rich-text="false" class="button" />
+        <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PauseQuitButton" class="button" />
+    </ui:VisualElement>
+</ui:UXML>
