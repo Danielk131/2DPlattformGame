@@ -53,8 +53,8 @@ public class TestingInputSystem : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        float extraHeightText = 1f;
-        RaycastHit2D raycastHit2D = Physics2D.BoxCast(capsuleCollider2D.bounds.center, capsuleCollider2D.bounds.size, 0f, Vector2.down, extraHeightText,
+        float extraHeightText = 0.1f;
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(capsuleCollider2D.bounds.min, capsuleCollider2D.bounds.size, 0f, Vector2.down, extraHeightText,
             groundLayer);
         Color rayColor;
         if (raycastHit2D.collider != null)
