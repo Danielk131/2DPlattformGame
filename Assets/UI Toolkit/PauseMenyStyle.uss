@@ -30,6 +30,3 @@ VisualElement {
 .button:hover {
     scale: 1.5 1.5;
 }
-
-.button:click {
-}

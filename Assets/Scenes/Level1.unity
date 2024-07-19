@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 831714571}
   - component: {fileID: 831714570}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UICoinCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -913,7 +913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109605055}
   - component: {fileID: 1109605054}
-  - component: {fileID: 1109605056}
+  - component: {fileID: 1109605057}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109605053}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -952,7 +952,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1109605056
+--- !u!114 &1109605057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -961,9 +961,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1109605053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb8cf73530065994fb190dfb7993fe93, type: 3}
+  m_Script: {fileID: 11500000, guid: 716410376c346cf4ea925df7eef6c4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _document: {fileID: 1109605054}
 --- !u!1001 &1132351908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2889,11 +2890,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 140089141358025495, guid: 2243d1b3d0617f84d9ed191457b7a5f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.574768
+      value: 2.569644
       objectReference: {fileID: 0}
     - target: {fileID: 140089141358025495, guid: 2243d1b3d0617f84d9ed191457b7a5f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.28506
+      value: -0.28508
       objectReference: {fileID: 0}
     - target: {fileID: 140089141358025495, guid: 2243d1b3d0617f84d9ed191457b7a5f2, type: 3}
       propertyPath: m_LocalPosition.z

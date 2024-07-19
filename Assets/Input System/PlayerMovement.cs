@@ -25,6 +25,8 @@ public class TestingInputSystem : MonoBehaviour
     [SerializeField] private Animator animator;
 
     [SerializeField] private UIDocument _document;
+
+   
     
 
     private void Update()
@@ -153,13 +155,7 @@ public class TestingInputSystem : MonoBehaviour
     }
     public void PauseGame(InputAction.CallbackContext context)
     {
-        Debug.Log("Trykket på esc!");
-       if (context.performed)
-        {
-            _document.enabled = true;
-       }
-       
-
+        PauseMenu.instance.PauseButtonPressed();       
         }
     }
 
